@@ -15,6 +15,7 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
 		/* You fill this in */
+		println("asasa");
 	}
 
 }
