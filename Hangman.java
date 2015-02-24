@@ -22,9 +22,7 @@ public class Hangman extends ConsoleProgram {
     	
 
     	while (true) {
-    		// User input
-    		String userInput = readLine("Enter a letter: ");
-    		userInput = userInput.toUpperCase();
+
     	
     		// Display the guessed word
     		String guessedWord = "";
@@ -33,6 +31,11 @@ public class Hangman extends ConsoleProgram {
     			guessedWord += "-";
     		}
     		println("Your guessed word is: " + guessedWord);
+    		
+    		// User input
+    		String userInput = readLine("Enter a letter: ");
+    		userInput = userInput.toUpperCase();
+    		
     		int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
     		if ( indexOfTheGuessedLetter != -1) {
     			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
