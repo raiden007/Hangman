@@ -39,7 +39,7 @@ public class Hangman extends ConsoleProgram {
         		userInput = userInput.toUpperCase();
         		char letter = userInput.charAt(0);
 	    		boolean isLetter = Character.isLetter(letter);
-	    		if (userInput.length() == 1) {
+	    		if (userInput.length() > 1) {
 	    			println("Only one letter");
 	    		} else if (isLetter == false) {
 	    			println ("Only letters are accepted");
