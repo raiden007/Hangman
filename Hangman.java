@@ -26,7 +26,7 @@ public class Hangman extends ConsoleProgram {
     	println("Your guessed word is: " + guessedWord);
     	guesses = 8;
    		
-       	while (true) {   
+       	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
        		// User input
         	String userInput = readLine("Enter a letter: ");
@@ -51,12 +51,11 @@ public class Hangman extends ConsoleProgram {
 	    		} else {
 	    			println("Wrong letter");
 	    			guesses --;
-	    			if (guesses == 0) {
-	    				println("GAME OVER!");
-	    			}
 	    		}
 	    	}
         }
+       	
+       	println("GAME OVER!");
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
 		
