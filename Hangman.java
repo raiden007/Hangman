@@ -34,19 +34,26 @@ public class Hangman extends ConsoleProgram {
     		
         	while (true) {   		
     		
-    		// User input
-    		String userInput = readLine("Enter a letter: ");
-    		userInput = userInput.toUpperCase();
-    		
-    		int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
-    		if ( indexOfTheGuessedLetter != -1) {
-    			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-    			println(guessedWord);
-    		} else {
-    			println("Wrong letter");
-    		}
-    	}
-    	
+        		// User input
+        		String userInput = readLine("Enter a letter: ");
+        		userInput = userInput.toUpperCase();
+        		char letter = userInput.charAt(0);
+	    		boolean isLetter = Character.isLetter(letter);
+	    		if (userInput.length() == 1) {
+	    			println("Only one letter");
+	    		} else if (isLetter == false) {
+	    			println ("Only letters are accepted");
+	    		} else {
+	    		
+	    			int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
+	    			if ( indexOfTheGuessedLetter != -1) {
+	    				guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    				println(guessedWord);
+	    			} else {
+	    				println("Wrong letter");
+	    			}
+	    		}
+        	}
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
 		
