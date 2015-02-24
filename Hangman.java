@@ -14,46 +14,42 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 
     public void run() {
-		/* You fill this in */
+		// Get random word
     	String randomWord = getRandomWord();
     	println(randomWord);
-    	
-    	//TODO: Keep track of the partially guessed word from the user. It begins as a series of dashes and it's updated with the correct letters.
-    	
-
-
-
-    	
-    		// Display the guessed word
-    		String guessedWord = "";
-    	
-    		for (int i = 0; i < randomWord.length(); i++) {
-    			guessedWord += "-";
-    		}
-    		println("Your guessed word is: " + guessedWord);
-    		
-        	while (true) {   		
-    		
-        		// User input
-        		String userInput = readLine("Enter a letter: ");
-        		userInput = userInput.toUpperCase();
-        		char letter = userInput.charAt(0);
-	    		boolean isLetter = Character.isLetter(letter);
-	    		if (userInput.length() > 1) {
-	    			println("Only one letter");
-	    		} else if (isLetter == false) {
-	    			println ("Only letters are accepted");
+    	// Display the guessed word
+    	String guessedWord = "";
+  	
+   		for (int i = 0; i < randomWord.length(); i++) {
+   			guessedWord += "-";
+   		}
+    	println("Your guessed word is: " + guessedWord);
+   		
+       	while (true) {   				
+       		// User input
+        	String userInput = readLine("Enter a letter: ");
+        	userInput = userInput.toUpperCase();
+        		
+        	char letter = userInput.charAt(0);
+	    	boolean isLetter = Character.isLetter(letter);
+	    	// Check if there are more letter or they are not letters
+	    	if (userInput.length() > 1) {
+	    		println("Only one letter");
+	    	} else if (isLetter == false) {
+	    		println ("Only letters are accepted");
+	    	// Add characters to the guessed word
+	    	//TODO: If you have the same letter twice it will not show the second one
+	    	} else {
+	    		int indexOfTheGuessedLetter = 0;
+	    		indexOfTheGuessedLetter = randomWord.indexOf(userInput);
+	    		if ( indexOfTheGuessedLetter != -1) {
+	    			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    			println(guessedWord);
 	    		} else {
-	    			int indexOfTheGuessedLetter = 0;
-	    			indexOfTheGuessedLetter = randomWord.indexOf(userInput);
-	    			if ( indexOfTheGuessedLetter != -1) {
-	    				guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-	    				println(guessedWord);
-	    			} else {
-	    				println("Wrong letter");
-	    			}
+	    			println("Wrong letter");
 	    		}
-        	}
+	    	}
+        }
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
 		
