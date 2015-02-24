@@ -24,14 +24,12 @@ public class Hangman extends ConsoleProgram {
    			guessedWord += "-";
    		}
     	println("Your guessed word is: " + guessedWord);
-    	
+		String newWord = "";
     	// Split the word into characters
     	for (int i = 0; i < guessedWord.length(); i++) {
     		char letter = guessedWord.charAt(i);
-    		String newWord = "";
-    		newWord = (String) newWord + letter;
-    		print(newWord);
-
+    		newWord = newWord + letter;
+    		println(newWord);
     	}
 		println();
     	guesses = 8;
