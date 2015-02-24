@@ -15,28 +15,31 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
 		// Get random word
+    	println("Welcome to Hangman!");
     	String randomWord = getRandomWord();
     	println(randomWord);
     	// Display the guessed word
     	String guessedWord = "";
-  	
    		for (int i = 0; i < randomWord.length(); i++) {
    			guessedWord += "-";
    		}
     	println("Your guessed word is: " + guessedWord);
+    	guesses = 8;
    		
-       	while (true) {   				
+       	while (true) {   
+        	println("You have " + guesses + " guesses left!");
        		// User input
         	String userInput = readLine("Enter a letter: ");
-        	userInput = userInput.toUpperCase();
-        		
+        	userInput = userInput.toUpperCase();	
         	char letter = userInput.charAt(0);
 	    	boolean isLetter = Character.isLetter(letter);
+	    	
 	    	// Check if there are more letter or they are not letters
 	    	if (userInput.length() > 1) {
 	    		println("Only one letter");
 	    	} else if (isLetter == false) {
 	    		println ("Only letters are accepted");
+	    		
 	    	// Add characters to the guessed word
 	    	//TODO: If you have the same letter twice it will not show the second one
 	    	} else {
@@ -47,6 +50,10 @@ public class Hangman extends ConsoleProgram {
 	    			println(guessedWord);
 	    		} else {
 	    			println("Wrong letter");
+	    			guesses --;
+	    			if (guesses == 0) {
+	    				println("GAME OVER!");
+	    			}
 	    		}
 	    	}
         }
@@ -79,4 +86,5 @@ public class Hangman extends ConsoleProgram {
 
 	private RandomGenerator rgen = new RandomGenerator();
 	private HangmanLexicon lexicon = new HangmanLexicon();
+	private int guesses;
 }
