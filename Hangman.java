@@ -28,7 +28,8 @@ public class Hangman extends ConsoleProgram {
     	// Split the word into characters
     	for (int i = 0; i < guessedWord.length(); i++) {
     		char letter = guessedWord.charAt(i);
-    		String newWord = (String) newWord + letter;
+    		String newWord = "";
+    		newWord = (String) newWord + letter;
     		println("New Word" + newWord);
     	}
     	
@@ -72,7 +73,7 @@ public class Hangman extends ConsoleProgram {
 	    	}
         }
 	}
-    }   
+     
     // Gets a random word from the HangmanLexicon class
     private String getRandomWord() {
     	int randomindex = rgen.nextInt(0,lexicon.getWordCount()-1);
