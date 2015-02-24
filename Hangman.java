@@ -15,7 +15,6 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
 		/* You fill this in */
-    	//TODO: Choose a random word as the secret word.
     	String randomWord = getRandomWord();
     	println(randomWord);
     	
