@@ -20,6 +20,10 @@ public class Hangman extends ConsoleProgram {
     	
     	//TODO: Keep track of the partially guessed word from the user. It begins as a series of dashes and it's updated with the correct letters.
     	// This can be done as separate characters that can get updated and then shown as a string?
+    	char userInput = 'a';
+    	userInput = Character.toUpperCase(userInput);
+    	println(userInput);
+    	String userGuessed = "";
     	
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
