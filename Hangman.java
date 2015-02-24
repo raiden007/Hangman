@@ -31,6 +31,7 @@ public class Hangman extends ConsoleProgram {
     		String newWord = "";
     		newWord = (String) newWord + letter;
     		print(newWord);
+    		println();
     	}
     	
     	guesses = 8;
