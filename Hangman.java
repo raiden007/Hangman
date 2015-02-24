@@ -22,8 +22,16 @@ public class Hangman extends ConsoleProgram {
     	// This can be done as separate characters that can get updated and then shown as a string?
     	char userInput = 'a';
     	userInput = Character.toUpperCase(userInput);
-    	println(userInput);
-    	String userGuessed = "";
+    	String guessedWord = "";
+    	for (int i = 0; i < randomWord.length(); i++) {
+    		guessedWord += "-";
+    	}
+    	println(guessedWord);
+    	if (randomWord.indexOf(userInput) != -1) {
+    		
+    	} else {
+    		println("Wrong letter");
+    	}
     	
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
