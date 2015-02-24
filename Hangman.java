@@ -30,7 +30,7 @@ public class Hangman extends ConsoleProgram {
     		char letter = guessedWord.charAt(i);
     		String newWord = "";
     		newWord = (String) newWord + letter;
-    		println("New Word" + newWord);
+    		print("New Word" + newWord);
     	}
     	
     	guesses = 8;
