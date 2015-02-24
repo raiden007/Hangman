@@ -51,6 +51,10 @@ public class Hangman extends ConsoleProgram {
 	    		} else {
 	    			println("Wrong letter");
 	    			guesses --;
+	    			if (guesses == 0) {
+	    		       	println("GAME OVER!");
+	    		       	break;
+	    			}
 	    		}
 	    	}
 	    	// Victory for the user
@@ -61,7 +65,7 @@ public class Hangman extends ConsoleProgram {
 	    	}
         }
        	
-       	println("GAME OVER!");
+
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
 		
