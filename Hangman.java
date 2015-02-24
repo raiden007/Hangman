@@ -28,7 +28,9 @@ public class Hangman extends ConsoleProgram {
     	// Split the word into characters
     	for (int i = 0; i < guessedWord.length(); i++) {
     		char letter = guessedWord.charAt(i);
-    	
+    		String newWord = (String) newWord + letter;
+    		println(newWord);
+    	}
     	
     	guesses = 8;
        	while (guesses > 0) {   
