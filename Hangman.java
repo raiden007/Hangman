@@ -21,7 +21,7 @@ public class Hangman extends ConsoleProgram {
     	//TODO: Keep track of the partially guessed word from the user. It begins as a series of dashes and it's updated with the correct letters.
     	
 
-    	while (true) {
+
 
     	
     		// Display the guessed word
@@ -31,6 +31,8 @@ public class Hangman extends ConsoleProgram {
     			guessedWord += "-";
     		}
     		println("Your guessed word is: " + guessedWord);
+    		
+        	while (true) {   		
     		
     		// User input
     		String userInput = readLine("Enter a letter: ");
