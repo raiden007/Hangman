@@ -20,23 +20,26 @@ public class Hangman extends ConsoleProgram {
     	
     	//TODO: Keep track of the partially guessed word from the user. It begins as a series of dashes and it's updated with the correct letters.
     	
-    	// User input
-    	String userInput = readLine("Enter a letter: ");
-    	userInput = userInput.toUpperCase();
+
+    	while (true) {
+    		// User input
+    		String userInput = readLine("Enter a letter: ");
+    		userInput = userInput.toUpperCase();
     	
-    	// Display the guessed word
-    	String guessedWord = "";
+    		// Display the guessed word
+    		String guessedWord = "";
     	
-    	for (int i = 0; i < randomWord.length(); i++) {
-    		guessedWord += "-";
-    	}
-//    	println(guessedWord);
-    	int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
-    	if ( indexOfTheGuessedLetter != -1) {
-    		guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-    		println(guessedWord);
-    	} else {
-    		println("Wrong letter");
+    		for (int i = 0; i < randomWord.length(); i++) {
+    			guessedWord += "-";
+    		}
+//    		println(guessedWord);
+    		int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
+    		if ( indexOfTheGuessedLetter != -1) {
+    			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+    			println(guessedWord);
+    		} else {
+    			println("Wrong letter");
+    		}
     	}
     	
     	//TODO: Implement the basic control structure and manage the details 
