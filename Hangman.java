@@ -44,8 +44,8 @@ public class Hangman extends ConsoleProgram {
 	    		} else if (isLetter == false) {
 	    			println ("Only letters are accepted");
 	    		} else {
-	    		
-	    			int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
+	    			int indexOfTheGuessedLetter = 0;
+	    			indexOfTheGuessedLetter = randomWord.indexOf(userInput);
 	    			if ( indexOfTheGuessedLetter != -1) {
 	    				guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
 	    				println(guessedWord);
