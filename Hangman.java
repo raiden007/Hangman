@@ -43,7 +43,7 @@ public class Hangman extends ConsoleProgram {
     
     
     private String getRandomWord() {
-    	int randomindex = rgen.nextInt(0,lexicon.getWordCount());
+    	int randomindex = rgen.nextInt(0,lexicon.getWordCount()-1);
     	String randomWord = lexicon.getWord(randomindex);
 		return randomWord;
 	}
