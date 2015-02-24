@@ -29,7 +29,7 @@ public class Hangman extends ConsoleProgram {
     	for (int i = 0; i < guessedWord.length(); i++) {
     		char letter = guessedWord.charAt(i);
     		String newWord = (String) newWord + letter;
-    		println(newWord);
+    		println("New Word" + newWord);
     	}
     	
     	guesses = 8;
@@ -39,7 +39,7 @@ public class Hangman extends ConsoleProgram {
         	String userInput = readLine("Enter a letter: ");
         	userInput = userInput.toUpperCase();	
         	char guessedLetter = userInput.charAt(0);
-	    	boolean isLetter = Character.isLetter(letter);
+	    	boolean isLetter = Character.isLetter(guessedLetter);
 	    	
 	    	// Check if there are more letter or they are not letters
 	    	if (userInput.length() > 1) {
