@@ -19,16 +19,22 @@ public class Hangman extends ConsoleProgram {
     	println(randomWord);
     	
     	//TODO: Keep track of the partially guessed word from the user. It begins as a series of dashes and it's updated with the correct letters.
-    	// This can be done as separate characters that can get updated and then shown as a string?
-    	char userInput = 'a';
-    	userInput = Character.toUpperCase(userInput);
+    	
+    	// User input
+    	String userInput = readLine("Enter a letter: ");
+    	userInput = userInput.toUpperCase();
+    	
+    	// Display the guessed word
     	String guessedWord = "";
+    	
     	for (int i = 0; i < randomWord.length(); i++) {
     		guessedWord += "-";
     	}
-    	println(guessedWord);
-    	if (randomWord.indexOf(userInput) != -1) {
-    		
+//    	println(guessedWord);
+    	int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
+    	if ( indexOfTheGuessedLetter != -1) {
+    		guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+    		println(guessedWord);
     	} else {
     		println("Wrong letter");
     	}
@@ -52,7 +58,7 @@ public class Hangman extends ConsoleProgram {
 		*/
 	}
     
-    
+    // Gets a random word from the HangmanLexicon class
     private String getRandomWord() {
     	int randomindex = rgen.nextInt(0,lexicon.getWordCount()-1);
     	String randomWord = lexicon.getWord(randomindex);
