@@ -24,7 +24,6 @@ public class Hangman extends ConsoleProgram {
     	
     	//TODO: Implement the basic control structure and manage the details 
     	// (ask the user to guess a letter, keep track of the number of guesses remaining, print out the various messages, detect the end of the game, and so forth).
-		println("asasa");
 		
 	/*	
 		
