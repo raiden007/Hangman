@@ -32,7 +32,7 @@ public class Hangman extends ConsoleProgram {
     		for (int i = 0; i < randomWord.length(); i++) {
     			guessedWord += "-";
     		}
-//    		println(guessedWord);
+    		println("Your guessed word is: " + guessedWord);
     		int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
     		if ( indexOfTheGuessedLetter != -1) {
     			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
