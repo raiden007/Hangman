@@ -45,7 +45,6 @@ public class Hangman extends ConsoleProgram {
     		} else {
     			println("Wrong letter");
     		}
-    		guessedWord = guessedWord;
     	}
     	
     	//TODO: Implement the basic control structure and manage the details 
