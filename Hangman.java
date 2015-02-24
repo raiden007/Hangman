@@ -24,14 +24,19 @@ public class Hangman extends ConsoleProgram {
    			guessedWord += "-";
    		}
     	println("Your guessed word is: " + guessedWord);
+    	
+    	// Split the word into characters
+    	for (int i = 0; i < guessedWord.length(); i++) {
+    		char letter = guessedWord.charAt(i);
+    	
+    	
     	guesses = 8;
-   		
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
        		// User input
         	String userInput = readLine("Enter a letter: ");
         	userInput = userInput.toUpperCase();	
-        	char letter = userInput.charAt(0);
+        	char guessedLetter = userInput.charAt(0);
 	    	boolean isLetter = Character.isLetter(letter);
 	    	
 	    	// Check if there are more letter or they are not letters
@@ -65,13 +70,15 @@ public class Hangman extends ConsoleProgram {
 	    	}
         }
 	}
-    
+    }   
     // Gets a random word from the HangmanLexicon class
     private String getRandomWord() {
     	int randomindex = rgen.nextInt(0,lexicon.getWordCount()-1);
     	String randomWord = lexicon.getWord(randomindex);
 		return randomWord;
 	}
+    
+
 
 
 	private RandomGenerator rgen = new RandomGenerator();
