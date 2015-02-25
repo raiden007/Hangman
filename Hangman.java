@@ -20,6 +20,7 @@ public class Hangman extends ConsoleProgram {
     	println(randomWord);
     	// Display the guessed word
     	guessedWord = populateGuessedWord(randomWord);
+    	println("Your guessed word is: " + guessedWord);
     	
     	guesses = 8;
        	while (guesses > 0) {   
@@ -70,7 +71,7 @@ public class Hangman extends ConsoleProgram {
    		for (int i = 0; i < randomWord.length(); i++) {
    			guessedWord += "-";
    		}
-    	println("Your guessed word is: " + guessedWord);
+
     	return guessedWord;
 		
 	}
