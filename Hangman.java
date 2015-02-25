@@ -16,10 +16,10 @@ public class Hangman extends ConsoleProgram {
     public void run() {
 		// Get random word
     	println("Welcome to Hangman!");
-    	String randomWord = getRandomWord();
+    	randomWord = getRandomWord();
     	println(randomWord);
     	// Display the guessed word
-    	populateGuessedWord();
+    	guessedWord = populateGuessedWord();
     	
     	guesses = 8;
        	while (guesses > 0) {   
@@ -66,11 +66,12 @@ public class Hangman extends ConsoleProgram {
     	}
 	}
 
-	private void populateGuessedWord() {
+	private String populateGuessedWord() {
    		for (int i = 0; i < randomWord.length(); i++) {
    			guessedWord += "-";
    		}
     	println("Your guessed word is: " + guessedWord);
+    	return guessedWord;
 		
 	}
 
