@@ -42,8 +42,8 @@ public class Hangman extends ConsoleProgram {
     				if (userInput.charAt(0) == randomWord.charAt(i)) {
     					guessedWord = guessedWord.substring(0, i) + userInput + guessedWord.substring(i + 1);
     				}
-					println("Your guessed word is: " + guessedWord);
     			}
+			println("Your guessed word is: " + guessedWord);
         	}
 
 	    	if (indexOfTheGuessedLetter == -1) {
