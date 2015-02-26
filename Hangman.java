@@ -27,24 +27,21 @@ public class Hangman extends ConsoleProgram {
         	println("You have " + guesses + " guesses left!");
        		// User input
         	getUserInput();
-	    	// Check if there are more letter or they are not letters
-
-	    		
-	    	// Add characters to the guessed word
-	    	//TODO: If you have the same letter twice it will not show the second one
 	    		int indexOfTheGuessedLetter = 0;
-	    		indexOfTheGuessedLetter = randomWord.indexOf(userInput);
-	    		if ( indexOfTheGuessedLetter != -1) {
-	    			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    		String textRemainsToBeProcessed = randomWord;
+	    		while (indexOfTheGuessedLetter != -1) {
+	    			indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
+	    			textRemainsToBeProcessed = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    			guessedWord += textRemainsToBeProcessed;
+	    			textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
 	    			println("Your guessed word is: " + guessedWord);
-	    		} else {
-	    			println("Wrong letter");
-	    			guesses --;
-	    			if (guesses == 0) {
-	    		       	println("GAME OVER!");
-	    		       	break;
-	    			}
 	    		}
+	  
+	//    		println("Wrong letter");
+	  //  		guesses --;
+	  //  		if (guesses == 0) {
+	  //       	println("GAME OVER!");
+	  //  		}
 	    	}
 	    	// Victory for the user
 	    	char victoryCondition = '-'; 
