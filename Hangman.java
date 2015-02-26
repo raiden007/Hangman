@@ -53,7 +53,7 @@ public class Hangman extends ConsoleProgram {
 	    			println("GAME OVER!");
 	    		}
 	    	}
-	    }
+	    
 	    	// Victory for the user
 	    	char victoryCondition = '-'; 
 	    	if (guessedWord.indexOf(victoryCondition) == -1) {
@@ -61,7 +61,8 @@ public class Hangman extends ConsoleProgram {
 	    	}
         }
 	
-     
+    }
+    
     private String getUserInput() {
     	String userInput = readLine("Enter a letter: ");
     	userInput = userInput.toUpperCase();
