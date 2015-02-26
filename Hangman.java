@@ -91,5 +91,5 @@ public class Hangman extends ConsoleProgram {
 	String guessedWord;
 	String userInput;
 	String textRemainsToBeProcessed;
-	int indexOfTheGuessedLetter
+	int indexOfTheGuessedLetter;
 }
