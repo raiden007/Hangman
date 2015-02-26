@@ -33,14 +33,6 @@ public class Hangman extends ConsoleProgram {
 	    	textRemainsToBeProcessed = randomWord;
     		indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
     		if (indexOfTheGuessedLetter != -1) {
-    			/*
-    			while (indexOfTheGuessedLetter != -1) {
-    				textRemainsToBeProcessed = randomWord.substring(indexOfTheGuessedLetter + 1);
-        			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-        			println("Your guessed word is: " + guessedWord);
-        			indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
-        		}
-        		*/
     			for (int i = 0; i < randomWord.length(); i++) {
     				if (userInput.charAt(0) == randomWord.charAt(i)) {
     					guessedWord = guessedWord.substring(0, i) + userInput + guessedWord.substring(i + 1);
