@@ -39,9 +39,8 @@ public class Hangman extends ConsoleProgram {
         		}
         		*/
     			for (int i = 0; i < randomWord.length(); i++) {
-    				int index = i;
     				if (userInput.charAt(0) == randomWord.charAt(i)) {
-    					guessedWord = guessedWord.substring(0, index) + userInput + guessedWord.substring(index + 1);
+    					guessedWord = guessedWord.substring(0, i) + userInput + guessedWord.substring(i + 1);
     					println("Your guessed word is: " + guessedWord);
     				}
     			}
