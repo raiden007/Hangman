@@ -27,22 +27,23 @@ public class Hangman extends ConsoleProgram {
         	println("You have " + guesses + " guesses left!");
        		// User input
         	getUserInput();
-	    		int indexOfTheGuessedLetter = 0;
-	    		String textRemainsToBeProcessed = randomWord;
-	/*    		while (indexOfTheGuessedLetter != -1) {
-	    			indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
-	    			textRemainsToBeProcessed = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-	    			guessedWord += textRemainsToBeProcessed;
-	    			textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
-	    			println("Your guessed word is: " + guessedWord);
-	    		}
-	  */
-	//    		println("Wrong letter");
-	  //  		guesses --;
-	  //  		if (guesses == 0) {
-	  //       	println("GAME OVER!");
-	  //  		}
+	    	int indexOfTheGuessedLetter = 0;
+	    	String textRemainsToBeProcessed = randomWord;
+	    	while (indexOfTheGuessedLetter != -1) {
+	    		indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
+	    		textRemainsToBeProcessed = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    		guessedWord += textRemainsToBeProcessed;
+	    		textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
+	    		println("Your guessed word is: " + guessedWord);
 	    	}
+	    	if (indexOfTheGuessedLetter != -1) {
+	    		println("Wrong letter");
+	    		guesses --;
+	    		if (guesses == 0) {
+	    			println("GAME OVER!");
+	    		}
+	    	}
+	    }
 	    	// Victory for the user
 	    	char victoryCondition = '-'; 
 	    	if (guessedWord.indexOf(victoryCondition) == -1) {
