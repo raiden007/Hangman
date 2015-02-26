@@ -21,7 +21,10 @@ public class Hangman extends ConsoleProgram {
     	// Display the guessed word
     	guessedWord = populateGuessedWord(randomWord);
     	println("Your guessed word is: " + guessedWord);
-    	
+    	playGame();
+    }
+    
+    private void playGame() {
     	guesses = 8;
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
@@ -61,10 +64,10 @@ public class Hangman extends ConsoleProgram {
 	    		break;
 	    	}
         }
-	
-    }
-    
-    private String getUserInput() {
+		
+	}
+
+	private String getUserInput() {
     	String userInput = readLine("Enter a letter: ");
     	userInput = userInput.toUpperCase();
     	boolean isLetter = Character.isLetter(userInput.charAt(0));
