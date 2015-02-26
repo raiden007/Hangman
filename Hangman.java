@@ -28,13 +28,14 @@ public class Hangman extends ConsoleProgram {
        		// User input
         	getUserInput();
 	    	String textRemainsToBeProcessed = randomWord;
-	    	int indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
-	    	while (indexOfTheGuessedLetter != -1) {
-	    		textRemainsToBeProcessed = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-	    		guessedWord += textRemainsToBeProcessed;
-	    		textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
-	    		println("Your guessed word is: " + guessedWord);
-	    	}
+    		int indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
+        	for (int i = 0; i < randomWord.length(); i++) {
+        		if (indexOfTheGuessedLetter != -1) {
+        			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
+        			textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
+        			println("Your guessed word is: " + guessedWord);
+        		}
+        	}
 	    	if (indexOfTheGuessedLetter == -1) {
 	    		println("Wrong letter");
 	    		guesses --;
