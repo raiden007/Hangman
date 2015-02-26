@@ -51,6 +51,7 @@ public class Hangman extends ConsoleProgram {
 
 	    	if (indexOfTheGuessedLetter == -1) {
 	    		println("Wrong letter");
+	    		println("Your guessed word is: " + guessedWord);
 	    		guesses --;
 	    		if (guesses == 0) {
 	    			println("GAME OVER!");
