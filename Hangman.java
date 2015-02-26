@@ -26,15 +26,9 @@ public class Hangman extends ConsoleProgram {
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
        		// User input
-        	getUserInput();
+        	userInput = getUserInput();
 	    	textRemainsToBeProcessed = randomWord;
-    		indexOfTheGuessedLetter = 0;
     		indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
-    		
-    		if ( indexOfTheGuessedLetter != -1) {
-    			guessedWord = guessedWord.substring(0, indexOfTheGuessedLetter) + userInput + guessedWord.substring(indexOfTheGuessedLetter + 1);
-    			println(guessedWord);
-    		}
     		if (indexOfTheGuessedLetter != -1) {
     			while (indexOfTheGuessedLetter != -1) {
     				textRemainsToBeProcessed = guessedWord.substring(indexOfTheGuessedLetter + 1);
@@ -60,7 +54,7 @@ public class Hangman extends ConsoleProgram {
         }
 	
      
-    private void getUserInput() {
+    private String getUserInput() {
     	String userInput = readLine("Enter a letter: ");
     	userInput = userInput.toUpperCase();
     	boolean isLetter = Character.isLetter(userInput.charAt(0));
@@ -71,6 +65,7 @@ public class Hangman extends ConsoleProgram {
     	} else if (isLetter == false) {
     		println ("Only letters are accepted");
     	}
+    	return userInput;
 	}
 
 	private String populateGuessedWord(String randomWord) {
