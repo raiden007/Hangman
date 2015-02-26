@@ -58,6 +58,7 @@ public class Hangman extends ConsoleProgram {
 	    	char victoryCondition = '-'; 
 	    	if (guessedWord.indexOf(victoryCondition) == -1) {
 	    		println("YOU WON!");
+	    		break;
 	    	}
         }
 	
