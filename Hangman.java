@@ -27,7 +27,7 @@ public class Hangman extends ConsoleProgram {
         	println("You have " + guesses + " guesses left!");
        		// User input
         	getUserInput();
-	    	String textRemainsToBeProcessed = randomWord;
+	    	textRemainsToBeProcessed = randomWord;
     		int indexOfTheGuessedLetter = randomWord.indexOf(userInput);
     		if (indexOfTheGuessedLetter != -1) {
     			for (int i = 0; i < randomWord.length(); i++) {
