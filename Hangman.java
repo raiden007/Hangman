@@ -45,9 +45,11 @@ public class Hangman extends ConsoleProgram {
     				}
     			}
 			println("Your guessed word is: " + guessedWord);
+			canvas.displayWord(guessedWord);
         	}
 
 	    	if (indexOfTheGuessedLetter == -1) {
+	    		canvas.noteIncorrectGuess(userInput.charAt(0));
 	    		println("Wrong letter");
 	    		guesses --;
 	    		if (guesses == 0) {
