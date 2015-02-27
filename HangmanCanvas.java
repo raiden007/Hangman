@@ -80,7 +80,7 @@ private void drawLeftLeg() {
 private void drawRightArm() {
 	GLine rightArm = new GLine (245,95 + ARM_OFFSET_FROM_HEAD,245+UPPER_ARM_LENGTH,95 + ARM_OFFSET_FROM_HEAD);
 	add (rightArm);
-	GLine rightHand = new GLine (245-UPPER_ARM_LENGTH,95 + ARM_OFFSET_FROM_HEAD, 245-UPPER_ARM_LENGTH, 95 + ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
+	GLine rightHand = new GLine (245+UPPER_ARM_LENGTH,95 + ARM_OFFSET_FROM_HEAD, 245-UPPER_ARM_LENGTH, 95 + ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
 	add (rightHand);
 	
 }
