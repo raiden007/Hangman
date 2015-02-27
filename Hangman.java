@@ -34,17 +34,16 @@ public class Hangman extends ConsoleProgram {
     	guesses = 8;
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
-        	canvas.displayWord(guessedWord);
-        	
+
        		// User input
         	userInput = getUserInput();
+        	canvas.displayWord(userInput);
 	    	textRemainsToBeProcessed = randomWord;
     		indexOfTheGuessedLetter = textRemainsToBeProcessed.indexOf(userInput);
     		if (indexOfTheGuessedLetter != -1) {
     			for (int i = 0; i < randomWord.length(); i++) {
     				if (userInput.charAt(0) == randomWord.charAt(i)) {
     					guessedWord = guessedWord.substring(0, i) + userInput + guessedWord.substring(i + 1);
-    					canvas.displayWord(guessedWord);
     				}
     			}
 			println("Your guessed word is: " + guessedWord);

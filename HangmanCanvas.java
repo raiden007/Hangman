@@ -23,12 +23,11 @@ public class HangmanCanvas extends GCanvas {
  * state of the game.  The argument string shows what letters have
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
-	public void displayWord(String word) {	
-		GLabel guessedWord = new GLabel (word);
-		guessedWord.setLocation(100, 450);
-		remove(guessedWord);
-		add (guessedWord);
-
+	public void displayWord(String word) {
+		lettersFromUser += word;
+		GLabel label = new GLabel(lettersFromUser);
+		label.setLocation(100, 450);
+		add (label);
 	}
 
 /**
@@ -111,5 +110,5 @@ private void drawHead() {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	private int guesses = 8;
-
+	private String lettersFromUser;
 }
