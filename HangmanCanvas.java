@@ -58,7 +58,8 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 private void drawRightFoot() {
-	// TODO Auto-generated method stub
+	GLine rightFoot = new GLine (245 + HIP_WIDTH, 95 + BODY_LENGTH + LEG_LENGTH, 245 + HIP_WIDTH + FOOT_LENGTH, 95 + BODY_LENGTH + LEG_LENGTH);
+	add (rightFoot);
 	
 }
 
