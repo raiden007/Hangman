@@ -93,7 +93,7 @@ private void drawBody() {
 }
 
 private void drawHead() {
-	GOval head = new GOval (100+BEAM_LENGTH,100,HEAD_RADIUS, HEAD_RADIUS);
+	GOval head = new GOval (240,100,HEAD_RADIUS, HEAD_RADIUS);
 	add (head);
 	
 }
