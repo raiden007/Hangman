@@ -76,7 +76,8 @@ private void drawRightLeg() {
 private void drawLeftLeg() {
 	GLine leftHip = new GLine (245,95+BODY_LENGTH, 245 - HIP_WIDTH, 95+BODY_LENGTH );
 	add (leftHip);
-	
+	GLine leftLeg = new GLine (245 - HIP_WIDTH, 95+BODY_LENGTH, 245 - HIP_WIDTH, 95+BODY_LENGTH+LEG_LENGTH);
+	add (leftLeg);
 }
 
 private void drawRightArm() {
