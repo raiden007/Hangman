@@ -68,7 +68,8 @@ private void drawLeftFoot() {
 }
 
 private void drawRightLeg() {
-	// TODO Auto-generated method stub
+	GLine rightHip = new GLine (245,95+BODY_LENGTH, 245 + HIP_WIDTH, 95+BODY_LENGTH );
+	add (rightHip);
 	
 }
 
