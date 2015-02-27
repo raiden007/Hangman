@@ -70,14 +70,14 @@ private void drawLeftFoot() {
 private void drawRightLeg() {
 	GLine rightHip = new GLine (245,95+BODY_LENGTH, 245 + HIP_WIDTH, 95+BODY_LENGTH );
 	add (rightHip);
-	GLine rightLeg = new GLine (245 - HIP_WIDTH, 95+BODY_LENGTH, 245 - HIP_WIDTH, 95+BODY_LENGTH+LEG_LENGTH);
+	GLine rightLeg = new GLine (245 + HIP_WIDTH, 95 + BODY_LENGTH, 245 + HIP_WIDTH, 95 + BODY_LENGTH + LEG_LENGTH);
 	add (rightLeg);
 }
 
 private void drawLeftLeg() {
 	GLine leftHip = new GLine (245,95+BODY_LENGTH, 245 - HIP_WIDTH, 95+BODY_LENGTH );
 	add (leftHip);
-	GLine leftLeg = new GLine (245 - HIP_WIDTH, 95+BODY_LENGTH, 245 - HIP_WIDTH, 95+BODY_LENGTH+LEG_LENGTH);
+	GLine leftLeg = new GLine (245 - HIP_WIDTH, 95 + BODY_LENGTH, 245 - HIP_WIDTH, 95 + BODY_LENGTH + LEG_LENGTH);
 	add (leftLeg);
 }
 
