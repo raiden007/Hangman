@@ -63,7 +63,7 @@ private void drawRightFoot() {
 }
 
 private void drawLeftFoot() {
-	GLine leftFoot = new GLine (245 - HIP_WIDTH, 95 + BODY_LENGTH + LEG_LENGTH, 245 - HIP_WIDTH - FOOT_LENGTH, 95 + BODY_LENGTH);
+	GLine leftFoot = new GLine (245 - HIP_WIDTH, 95 + BODY_LENGTH + LEG_LENGTH, 245 - HIP_WIDTH - FOOT_LENGTH, 95 + BODY_LENGTH + LEG_LENGTH);
 	add (leftFoot);
 	
 }
