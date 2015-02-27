@@ -37,8 +37,65 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+		guesses --;
+		if (guesses == 7) {
+			drawHead();
+		} else if (guesses == 6) {
+			drawBody();
+		} else if (guesses == 5) {
+			drawLeftArm();
+		} else if (guesses == 4) {
+			drawRightArm();
+		} else if (guesses == 3) {
+			drawLeftLeg();
+		} else if (guesses == 2) {
+			drawRightLeg();
+		} else if (guesses == 1) {
+			drawLeftFoot();
+		} else {
+			drawRightFoot();
+		}
 	}
+
+private void drawRightFoot() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawLeftFoot() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawRightLeg() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawLeftLeg() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawRightArm() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawLeftArm() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawBody() {
+	// TODO Auto-generated method stub
+	
+}
+
+private void drawHead() {
+	// TODO Auto-generated method stub
+	
+}
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
@@ -52,5 +109,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
+	private int guesses = 8;
 
 }
