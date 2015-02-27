@@ -88,14 +88,14 @@ private void drawLeftArm() {
 }
 
 private void drawBody() {
-	// TODO Auto-generated method stub
+	GLine body = new GLine (100,100,200,200);
+	add (body);
 	
 }
 
 private void drawHead() {
 	GOval head = new GOval (225,60,HEAD_RADIUS, HEAD_RADIUS);
 	add (head);
-	
 }
 
 /* Constants for the simple version of the picture (in pixels) */
