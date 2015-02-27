@@ -12,8 +12,14 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
+	
+	 public void init() {
+         canvas = new HangmanCanvas();
+         add(canvas);
+	 }
 
     public void run() {
+    	canvas.reset();
 		// Get random word
     	println("Welcome to Hangman!");
     	randomWord = getRandomWord();
@@ -100,4 +106,5 @@ public class Hangman extends ConsoleProgram {
 	String userInput;
 	String textRemainsToBeProcessed;
 	int indexOfTheGuessedLetter;
+	private HangmanCanvas canvas;
 }
