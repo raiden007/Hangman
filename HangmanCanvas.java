@@ -83,7 +83,8 @@ private void drawRightArm() {
 }
 
 private void drawLeftArm() {
-	// TODO Auto-generated method stub
+	GLine leftArm = new GLine (250,95,300,300);
+	add (leftArm);
 	
 }
 
