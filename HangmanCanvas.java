@@ -83,7 +83,7 @@ private void drawRightArm() {
 }
 
 private void drawLeftArm() {
-	GLine leftArm = new GLine (245,95 + ARM_OFFSET_FROM_HEAD,245-UPPER_ARM_LENGTH,95);
+	GLine leftArm = new GLine (245,95 + ARM_OFFSET_FROM_HEAD,245-UPPER_ARM_LENGTH,95 + ARM_OFFSET_FROM_HEAD);
 	add (leftArm);
 	
 }
