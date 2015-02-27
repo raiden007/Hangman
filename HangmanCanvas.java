@@ -110,5 +110,5 @@ private void drawHead() {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	private int guesses = 8;
-	private String lettersFromUser;
+	private String lettersFromUser = "";
 }
