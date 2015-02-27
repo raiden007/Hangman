@@ -25,6 +25,8 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		lettersFromUser = lettersFromUser + " " + word;
+		GLabel label = new GLabel(lettersFromUser);
+		remove (label);
 		label.setLocation(100, 450);
 		add (label);
 	}
@@ -110,5 +112,5 @@ private void drawHead() {
 	private static final int FOOT_LENGTH = 28;
 	private int guesses = 8;
 	private String lettersFromUser = " ";
-	GLabel label = new GLabel(lettersFromUser);
+
 }
