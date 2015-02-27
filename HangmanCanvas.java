@@ -88,7 +88,7 @@ private void drawLeftArm() {
 }
 
 private void drawBody() {
-	GLine body = new GLine (100,100,200,200);
+	GLine body = new GLine (100,100,100+BODY_LENGTH,100+BODY_LENGTH);
 	add (body);
 	
 }
