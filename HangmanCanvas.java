@@ -16,7 +16,6 @@ public class HangmanCanvas extends GCanvas {
 		add (beam);
 		GLine rope = new GLine (100+BEAM_LENGTH,400-SCAFFOLD_HEIGHT,100+BEAM_LENGTH,400-SCAFFOLD_HEIGHT+ROPE_LENGTH );
 		add (rope);
-		/* You fill this in */
 	}
 
 /**
@@ -26,6 +25,8 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		/* You fill this in */
+		GLabel guessedWord = new GLabel (word);
+		add (guessedWord,100,100);
 	}
 
 /**
