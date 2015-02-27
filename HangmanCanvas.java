@@ -26,8 +26,9 @@ public class HangmanCanvas extends GCanvas {
 	public void displayWord(String word) {	
 		GLabel guessedWord = new GLabel (word);
 		guessedWord.setLocation(100, 450);
-		add (guessedWord);
 		remove(guessedWord);
+		add (guessedWord);
+
 	}
 
 /**
