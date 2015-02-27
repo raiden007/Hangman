@@ -34,7 +34,7 @@ public class Hangman extends ConsoleProgram {
     	guesses = 8;
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
-
+        	canvas.displayWord(guessedWord);
        		// User input
         	userInput = getUserInput();
 	    	textRemainsToBeProcessed = randomWord;
