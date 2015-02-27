@@ -24,7 +24,6 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		removeAll();
 		lettersFromUser = lettersFromUser + " " + word;
 		GLabel label = new GLabel(lettersFromUser);
 		label.setLocation(100, 450);
@@ -94,7 +93,8 @@ private void drawBody() {
 }
 
 private void drawHead() {
-	// TODO Auto-generated method stub
+	GOval head = new GOval (100,100,HEAD_RADIUS, HEAD_RADIUS);
+	add (head);
 	
 }
 
