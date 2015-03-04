@@ -31,7 +31,7 @@ public class Hangman extends ConsoleProgram {
     }
     
     private void playGame() {
-    	guesses = 10;
+    	guesses = 8;
        	while (guesses > 0) {   
         	println("You have " + guesses + " guesses left!");
 
