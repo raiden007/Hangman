@@ -9,19 +9,19 @@ import java.awt.*;
 import java.io.*;
 import java.*;
 import acm.util.*;
-import acmx.export.java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class HangmanLexicon {
 	
 	  // This is the HangmanLexicon constructor
 	   public HangmanLexicon() {
 	      // your initialization code goes here
-		   ArrayList records = new ArrayList();
+		   ArrayList<String> records = new ArrayList<String>();
 		   try {
 			   BufferedReader reader = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			   String line;
