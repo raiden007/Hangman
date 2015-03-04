@@ -5,14 +5,31 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
+import java.awt.*;
+import java.io.*;
+import java.*;
 import acm.util.*;
+import acmx.export.java.util.ArrayList;
 
 public class HangmanLexicon {
 	
 	  // This is the HangmanLexicon constructor
 	   public HangmanLexicon() {
 	      // your initialization code goes here
-		   
+		   ArrayList <String> records = new ArrayList <String>();
+		   try {
+			   BufferedReader reader = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			   String line;
+			    while ((line = reader.readLine()) != null) {
+			    	records.add(line);
+			    }
+			    reader.close();
+		   }
+		   catch (Exception e)
+		   {
+		     System.err.format("Exception occurred trying to read '%s'.", "HangmanLexicon.txt");
+		     e.printStackTrace();
+		   }
 	   }
 
 /** Returns the number of words in the lexicon. */
