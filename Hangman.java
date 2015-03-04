@@ -23,7 +23,7 @@ public class Hangman extends ConsoleProgram {
 		// Get random word
     	println("Welcome to Hangman!");
     	randomWord = getRandomWord();
-    	println(randomWord);
+//    	println(randomWord);
     	// Display the guessed word
     	guessedWord = populateGuessedWord(randomWord);
     	println("Your guessed word is: " + guessedWord);
