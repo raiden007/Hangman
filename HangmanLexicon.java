@@ -43,5 +43,5 @@ public class HangmanLexicon {
 		return word;
 	}
 	
-	ArrayList records;
+	ArrayList<String> records;
 }
