@@ -39,7 +39,8 @@ public class HangmanLexicon {
 
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		return 10;
+		int count = records.size();
+		return count;
 
 	}
 
@@ -58,5 +59,7 @@ public class HangmanLexicon {
 			case 9: return "ZIRCON";
 			default: throw new ErrorException("getWord: Illegal index");
 		}
-	};
+	}
+	
+	ArrayList records;
 }
