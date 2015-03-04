@@ -10,13 +10,18 @@ import java.io.*;
 import java.*;
 import acm.util.*;
 import acmx.export.java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class HangmanLexicon {
 	
 	  // This is the HangmanLexicon constructor
 	   public HangmanLexicon() {
 	      // your initialization code goes here
-		   ArrayList <String> records = new ArrayList <String>();
+		   ArrayList records = new ArrayList();
 		   try {
 			   BufferedReader reader = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			   String line;
