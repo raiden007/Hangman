@@ -5,15 +5,8 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
-import java.awt.*;
-import java.io.*;
-import java.*;
-import acm.util.*;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class HangmanLexicon {
