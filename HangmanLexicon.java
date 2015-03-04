@@ -21,7 +21,7 @@ public class HangmanLexicon {
 	  // This is the HangmanLexicon constructor
 	   public HangmanLexicon() {
 	      // your initialization code goes here
-		   ArrayList<String> records = new ArrayList<String>();
+		   records = new ArrayList<String>();
 		   try {
 			   BufferedReader reader = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			   String line;
